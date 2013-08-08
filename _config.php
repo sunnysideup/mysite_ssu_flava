@@ -28,14 +28,13 @@ Email::setAdminEmail('swd@sunnysideup.co.nz');
 Session::set_timeout(1209600);//60 * 60 * 24 * 14
 Email::bcc_all_emails_to('copyonly@sunnysideup.co.nz');
 //Requirements::set_combined_files_folder("themes/main"); //DO NOT USE!!!
-//Director::forceWWW();
 FulltextSearchable::enable(array("SiteTree"));
 if(Director::isLive()) {
-	//Director::forceWWW();
+	Director::forceWWW();
 	SS_Log::add_writer(new SS_LogEmailWriter('errors@sunnysideup.co.nz'), SS_Log::ERR);
 }
 else {
-	Email::send_all_emails_to("example@best.com");
+	Email::send_all_emails_to("swd@sunnysideup.co.nz");
 	BasicAuth::protect_entire_site();
 	if(Director::isDev()) {
 		SSViewer::set_source_file_comments(true);
@@ -72,15 +71,20 @@ CMSMenu::remove_menu_item("CommentAdmin");
 PageComment::enableModeration();
 //===================---------------- END cms MODULE  ----------------===================
 
+
+
 //===================---------------- START blog MODULE ----------------===================
 BlogEntry::allow_wysiwyg_editing();
 BlogTree::$default_entries_limit = 1000;
 //===================---------------- END blog MODULE ----------------===================
 
+
+
 //===================---------------- START googleAnalyticsbasics MODULE ----------------===================
 Object::add_extension('SiteTree', 'GoogleAnalytics');
 GoogleAnalytics::$googleAnalyticsCode = "UA-8998394-4"; //e.g. UA-xxxx-y
 //===================---------------- END googleAnalyticsbasics MODULE ----------------===================
+
 
 
 //===================---------------- START metatags MODULE ----------------===================
@@ -125,9 +129,13 @@ LeftAndMain::$help_link = "admin/help/";
 //===================---------------- END templateoverview MODULE ----------------===================
 
 
+
+
 //===================---------------- START typography MODULE ----------------===================
 TypographyTestPage::set_auto_include(true);
 //===================---------------- END typography MODULE ----------------===================
+
+
 
 //===================---------------- START userdefinedforms MODULE ----------------===================
 UserDefinedForm::$required_identifier = "*";
