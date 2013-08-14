@@ -2,8 +2,7 @@
 
 class Page extends SiteTree {
 
-	static $has_one = array(
-		"Sidebar" => "WidgetArea",
+	private static $has_one = array(
 		"BackgroundImage" => "Image"
 	);
 
@@ -13,21 +12,6 @@ class Page extends SiteTree {
 		return $fields;
 	}
 
-	function requireDefaultRecords() {
-		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
-		parent::requireDefaultRecords();
-		$page = DataObject::get_one("Page", "{$bt}URLSegment{$bt} = 'admin-only'");
-		if(!$page) {
-			$page = new Page();
-			$page->URLSegment = "admin-only";
-			$page->Title = "Admin Only";
-			$page->ShowInMenus = 0;
-			$page->ShowInSearch = 0;
-			$page->writeToStage("Stage");
-			$page->publish("Stage", "Live");
-		}
-	}
-
 	function MyBackgroundImage() {
 		if($this->BackgroundImageID) {
 			if($image = $this->BackgroundImage()) {
@@ -35,7 +19,7 @@ class Page extends SiteTree {
 			}
 		}
 		if($this->ParentID) {
-			if($parent = DataObject::get_by_id("SiteTree", $this->ParentID)) {
+			if($parent = SiteTree::get()->byID($this->ParentID)) {
 				return $parent->MyBackgroundImage();
 			}
 		}
@@ -49,17 +33,6 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-		$theme = Session::get("theme");
-		if(!$theme) {
-			$theme = "main";
-		}
-		SSViewer::set_theme($theme);
-	}
-
-	function settheme(HTTPRequest $request){
-		$newTheme = $request->param("ID");
-		Session::set("theme", $newTheme);
-		Director::redirect($this->Link());
 	}
 
 
