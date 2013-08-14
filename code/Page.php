@@ -8,7 +8,6 @@ class Page extends SiteTree {
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab("Root.Content.Widgets", new WidgetAreaEditor("Sidebar"));
 		return $fields;
 	}
 
@@ -31,9 +30,6 @@ class Page extends SiteTree {
 
 class Page_Controller extends ContentController {
 
-	public function init() {
-		parent::init();
-	}
 
 
 }

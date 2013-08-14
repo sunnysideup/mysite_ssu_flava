@@ -6,7 +6,7 @@
  *
  **/
 
-class SiteConfigExtras extends DataObjectDecorator {
+class SiteConfigExtras extends DataExtension {
 
 	private static $db = array(
 		"CopyrightNotice" => "HTMLText",
@@ -16,7 +16,7 @@ class SiteConfigExtras extends DataObjectDecorator {
 		"BackgroundImage" => "Image"
 	);
 
-	function updateCMSFields(FieldSet &$fields) {
+	function updateCMSFields(FieldList $fields) {
 		$fields->addFieldToTab("Root.PageElements", new HTMLEditorField($name = "CopyrightNotice", $title = "Copyright notice.", 2));
 		$fields->addFieldToTab("Root.PageElements", new ImageField($name = "BackgroundImage", $title = "Background Image", null, null, null, "backgroundimage"));
 		return $fields;
