@@ -2,9 +2,11 @@
 
 
 /* startup */
-global $project; $project = 'mysite';
-global $database; $database = "silverstripe_webdevelopment_com";
-require_once("conf/ConfigureFromEnv.php");
+
+
+//global $database; $database = "upgradesilverstripe_com";
+//global $project; $project = 'upgradenow';
+//require_once("conf/ConfigureFromEnv.php");
 
 
 
