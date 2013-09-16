@@ -29,7 +29,7 @@ Email::bcc_all_emails_to('copyonly@sunnysideup.co.nz');
 FulltextSearchable::enable(array("SiteTree"));
 if(Director::isLive()) {
 	Director::forceWWW();
-	SS_Log::add_writer(new SS_LogEmailWriter('errors@sunnysideup.co.nz'), SS_Log::ERR);
+	SS_Log::add_writer(new SS_LogEmailWriter('ssuerrors@gmail.com'), SS_Log::ERR);
 }
 else {
 	Email::send_all_emails_to("swd@sunnysideup.co.nz");
