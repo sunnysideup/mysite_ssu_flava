@@ -1,18 +1,19 @@
 <?php
 
 
-/* startup */
+global $project; $project = 'mysite';
+global $database; require_once('conf/ConfigureFromEnv.php');
+require_once("conf/ConfigureFromEnv.php");
 
 
-//global $database; $database = "upgradesilverstripe_com";
-//global $project; $project = 'upgradenow';
-//require_once("conf/ConfigureFromEnv.php");
 
 
 
 //===================---------------- START php MODULE ----------------===================
-date_default_timezone_set("NZ");
+date_default_timezone_set('Pacific/Auckland');
 //===================---------------- END php MODULE ----------------===================
+
+
 
 
 //===================---------------- START sapphire MODULE ----------------===================
