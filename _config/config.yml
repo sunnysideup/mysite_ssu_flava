@@ -1,3 +1,53 @@
+---
+Name: mysiteconfig
+After: 'framework/*','cms/*'
+---
+SiteTree:
+  nested_urls: 1
+
+SSViewer:
+  theme: 'main'
+
+MySQLDatabase:
+  connection_charset: 'utf8'
+
 SiteConfig:
   extensions:
     - SiteConfigExtras
+
+GD:
+  default_quality: 85
+
+Email:
+  admin_email: 'swd@sunnysideup.co.nz'
+
+Session:
+  timeout: 1209600
+
+Email:
+ bcc_all_emails_to: ssuerrors@gmail.com
+
+Requirements:
+  combined_files_folder: "themes/main"
+
+i18n:
+  locale: 'en_NZ';
+  date_format: "dd-MM-YYYY"
+
+LeftAndMain:
+  application_name: "Sunny Side Up Website"
+  require_css:
+    - "mysite/css/cmsfixes.css"
+
+---
+Only:
+  environment: 'dev'
+---
+
+Email:
+  send_all_emails_to: "ssuerrors@gmail.com"
+
+BasicAuth:
+  entire_site_protected: 1
+  entire_site_protected_code: "Admin"
+  entire_site_protected_message: "This site is offline right now, please enter your username + password to gain access if you are the site owner"
