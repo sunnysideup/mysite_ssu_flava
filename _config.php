@@ -2,9 +2,8 @@
 
 
 global $project; $project = 'mysite';
-global $database; require_once('conf/ConfigureFromEnv.php');
+global $database; $database  = 'sunnysideup_co_nz';
 require_once("conf/ConfigureFromEnv.php");
-
 
 
 
