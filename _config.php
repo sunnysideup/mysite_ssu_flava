@@ -16,6 +16,7 @@ date_default_timezone_set('Pacific/Auckland');
 
 
 //===================---------------- START sapphire MODULE ----------------===================
+i18n::set_locale('en_NZ');
 FulltextSearchable::enable(array("SiteTree"));
 if(Director::isLive()) {
 	Director::forceWWW();
