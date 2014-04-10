@@ -32,7 +32,6 @@ class Page_Controller extends ContentController {
 
 	function init(){
 		parent::init();
-		echo Config::inst()->get("SSViewer", "theme");
 	}
 
 
