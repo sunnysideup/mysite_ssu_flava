@@ -19,7 +19,7 @@ date_default_timezone_set('Pacific/Auckland');
 i18n::set_locale('en_NZ');
 FulltextSearchable::enable(array("SiteTree"));
 if(Director::isLive()) {
-	Director::forceWWW();
+	//Director::forceWWW();
 	SS_Log::add_writer(new SS_LogEmailWriter('ssuerrors@gmail.com'), SS_Log::ERR);
 }
 //===================---------------- END sapphire MODULE ----------------===================

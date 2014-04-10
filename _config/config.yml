@@ -39,6 +39,10 @@ LeftAndMain:
   require_css:
     - "mysite/css/cmsfixes.css"
 
+GoogleAnalytics:
+  google_analytics_code: "UA-8998394-4"
+
+
 ---
 Only:
   environment: 'dev'
