@@ -2,7 +2,7 @@
 
 
 global $project; $project = 'mysite';
-global $database; $database  = 'sunnysideup_co_nz';
+global $database; $database  = 'silverstripe_webdevelopment_com';
 require_once("conf/ConfigureFromEnv.php");
 
 
