@@ -59,7 +59,7 @@
 					jQuery(this).removeClass("typography");
 				}
 			);
-		}
+		},
 
 		smoothScrolling: function() {
 			jQuery(function() {
