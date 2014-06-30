@@ -21,9 +21,6 @@ GD:
 Email:
   admin_email: 'swd@sunnysideup.co.nz'
 
-Session:
-  timeout: 1209600
-
 Email:
  bcc_all_emails_to: ssuerrors@gmail.com
 
