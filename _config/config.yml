@@ -39,6 +39,8 @@ LeftAndMain:
 GoogleAnalyticsSTE:
   main_code: "UA-8998394-4"
 
+#LeftAndMain:
+#  help_link: "admin/help/"
 
 ---
 Only:
