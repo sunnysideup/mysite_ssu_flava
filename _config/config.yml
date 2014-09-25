@@ -15,7 +15,7 @@ SiteConfig:
   extensions:
     - SiteConfigExtras
 
-GD:
+GDBackend:
   default_quality: 85
 
 Email:
@@ -24,16 +24,13 @@ Email:
 Email:
  bcc_all_emails_to: ssuerrors@gmail.com
 
-Requirements:
-  combined_files_folder: "themes/main"
-
 i18n:
-  locale: 'en_NZ';
+  default_locale: 'en_NZ';
   date_format: "dd-MM-YYYY"
 
 LeftAndMain:
   application_name: "Sunny Side Up Website"
-  require_css:
+  extra_requirements_css:
     - "mysite/css/cmsfixes.css"
 
 GoogleAnalyticsSTE:
