@@ -4,6 +4,8 @@ After: 'framework/*','cms/*'
 ---
 SiteTree:
   nested_urls: 1
+  create_default_pages: 0
+  meta_generator: "www.sunnysideup.co.nz based on the work of www.silverstripe.org and LAMP"
 
 SSViewer:
   theme: 'main'
@@ -35,6 +37,7 @@ LeftAndMain:
 
 GoogleAnalyticsSTE:
   main_code: "UA-8998394-4"
+
 
 #LeftAndMain:
 #  help_link: "admin/help/"
