@@ -16,10 +16,13 @@ date_default_timezone_set('Pacific/Auckland');
 
 
 //===================---------------- START sapphire MODULE ----------------===================
-i18n::set_locale('en_NZ');
 FulltextSearchable::enable(array("SiteTree"));
 if(Director::isLive()) {
 	Director::forceWWW();
 	SS_Log::add_writer(new SS_LogEmailWriter('ssuerrors@gmail.com'), SS_Log::ERR);
 }
+else {
+	BasicAuth::protect_entire_site();
+}
+
 //===================---------------- END sapphire MODULE ----------------===================

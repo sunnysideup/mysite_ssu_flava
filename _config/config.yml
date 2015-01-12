@@ -5,7 +5,7 @@ After: 'framework/*','cms/*'
 SiteTree:
   nested_urls: 1
   create_default_pages: 0
-  meta_generator: "www.sunnysideup.co.nz based on the work of www.silverstripe.org and LAMP"
+  meta_generator: "www.sunnysideup.co.nz based on www.silverstripe.org and LAMP"
 
 SSViewer:
   theme: 'main'
@@ -29,14 +29,14 @@ Email:
 i18n:
   default_locale: 'en_NZ';
   date_format: "dd-MM-YYYY"
+  locale: 'en_NZ'
 
 LeftAndMain:
   application_name: "Sunny Side Up Website"
   extra_requirements_css:
     - "mysite/css/cmsfixes.css"
 
-GoogleAnalyticsSTE:
-  main_code: "UA-8998394-4"
+
 
 
 #LeftAndMain:
