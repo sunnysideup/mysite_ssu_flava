@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="HTMLEditorFieldSmall" namespace="" name="HTMLEditorFieldSmall" abstract="false" final="false" start="65" end="106">
+  <file path="/var/www/_modules/mysite/trunk/docs/en/phpdox/../../../code/forms" file="HTMLEditorFieldSmall.php" realpath="/var/www/_modules/mysite/trunk/code/forms/HTMLEditorFieldSmall.php" size="4458" time="2015-03-14T10:22:19+13:00" unixtime="1426281739" sha1="6237593666a5e4050504ac9c18a664aff0214985" relative="code/forms/HTMLEditorFieldSmall.php"/>
+  <docblock>
+    <description compact="Sometimes you want two or more TinyMCE instances in the same page, and for each one to have it's own tinymce configuration. This class lets you do just that.">To use, pop something like this into your _config.php (this is a copy of what's in cms/_config, modified for
+our purposes)
+
+mlEditorConfig::get('linksonly')-&gt;setOptions(array(
+riendly_name' =&gt; 'Links Only',
+ode' =&gt; 'none',
+anguage' =&gt; i18n::get_tinymce_lang(),
+
+ody_class' =&gt; 'typography',
+ocument_base_url' =&gt; Director::absoluteBaseURL(),
+
+rlconverter_callback' =&gt; "nullConverter",
+etupcontent_callback' =&gt; "sapphiremce_setupcontent",
+leanup_callback' =&gt; "sapphiremce_cleanup",
+
+se_native_selects' =&gt; true, // fancy selects are bug as of SS 2.3.0
+alid_elements' =&gt; "@[id|class|style|title],#a[id|rel|rev|dir|tabindex|accesskey|type|name|href|target|title|class]",
+xtended_valid_elements' =&gt; "",
+
+utton_tile_map' =&gt; true
+;
+
+mlEditorConfig::get('linksonly')-&gt;enablePlugins(array('ssbuttons' =&gt; '../../../cms/javascript/tinymce_ssbuttons/editor_plugin_src.js'));
+
+mlEditorConfig::get('linksonly')-&gt;setButtonsForLine(1, array('sslink'));
+mlEditorConfig::get('linksonly')-&gt;setButtonsForLine(2, array());
+mlEditorConfig::get('linksonly')-&gt;setButtonsForLine(3, array());
+
+
+Then use this formfield in a form somewhere, passing the config name as it's first argument
+
+
+nction getCMSFields($fields = null) {
+ab-&gt;push(new CustomConfigHtmlEditorField('linksonly', 'RelatedLinks', 'Related Links', 3, 20));</description>
+  </docblock>
+  <extends full="HtmlEditorField" namespace="" name="HtmlEditorField"/>
+  <method name="include_js" start="67" end="95" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="configName" byreference="false" type="{unknown}"/>
+  </method>
+  <constructor name="__construct" start="97" end="105" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="config" byreference="false" type="{unknown}"/>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="title" byreference="false" type="{unknown}" default="null"/>
+    <parameter name="rows" byreference="false" type="integer" default="30"/>
+    <parameter name="cols" byreference="false" type="integer" default="20"/>
+    <parameter name="value" byreference="false" type="string" default="''"/>
+    <parameter name="form" byreference="false" type="{unknown}" default="null"/>
+    <inline>
+      <comment value="Skip the HtmlEditorField's constructor" line="98"/>
+    </inline>
+  </constructor>
+</class>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Page" namespace="" name="Page" abstract="false" final="false" start="3" end="29">
+  <file path="/var/www/_modules/mysite/trunk/docs/en/phpdox/../../../code" file="Page.php" realpath="/var/www/_modules/mysite/trunk/code/Page.php" size="703" time="2015-03-14T10:22:19+13:00" unixtime="1426281739" sha1="d06fed7b62eac3d86cb2049f38ce9f4eb4463f4a" relative="code/Page.php"/>
+  <extends full="SiteTree" namespace="" name="SiteTree"/>
+  <member name="has_one" type="array" visibility="private" line="5"/>
+  <method name="getCMSFields" start="9" end="12" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="MyBackgroundImage" start="14" end="28" abstract="false" final="false" static="false" visibility="public"/>
+</class>
