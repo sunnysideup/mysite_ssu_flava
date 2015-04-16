@@ -22,6 +22,11 @@ class Page extends SiteTree {
 				return $parent->MyBackgroundImage();
 			}
 		}
+		if($this->URLSegment != 'home') {
+			if($homePage = SiteTree::get()->filter(array('URLSegment' => 'home'))) {
+				return $homePage->MyBackgroundImage();
+			}
+		}
 		if($siteConfig = SiteConfig::current_site_config()) {
 			return $siteConfig->BackgroundImage();
 		}
