@@ -23,7 +23,7 @@ class Page extends SiteTree {
 			}
 		}
 		if($this->URLSegment != 'home') {
-			if($homePage = SiteTree::get()->filter(array('URLSegment' => 'home'))) {
+			if($homePage = SiteTree::get()->filter(array('URLSegment' => 'home'))->first()) {
 				return $homePage->MyBackgroundImage();
 			}
 		}
