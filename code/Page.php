@@ -39,6 +39,13 @@ class Page_Controller extends ContentController {
 		parent::init();
 	}
 
+	function Siblings(){
+		if(!$this->ParentID) {
+			$this->ParentID = 0;
+		}
+		return Page::get()
+			->filter(array("ShowInMenus" => 1, "ParentID" => $this->ParentID));
+	}
 
 }
 
