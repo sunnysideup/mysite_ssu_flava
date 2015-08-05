@@ -22,7 +22,7 @@ if(Director::isLive()) {
 	SS_Log::add_writer(new SS_LogEmailWriter('ssuerrors@gmail.com'), SS_Log::ERR);
 }
 else {
-	BasicAuth::protect_entire_site();
+	//BasicAuth::protect_entire_site(); see config.yml
 }
 
 //===================---------------- END sapphire MODULE ----------------===================
