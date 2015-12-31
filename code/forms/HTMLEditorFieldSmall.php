@@ -62,16 +62,18 @@ $tab->push(new CustomConfigHtmlEditorField('linksonly', 'RelatedLinks', 'Related
 }
 
 */
-class HTMLEditorFieldSmall extends HtmlEditorField {
+class HTMLEditorFieldSmall extends HtmlEditorField
+{
 
-	public static function include_js($configName) {
-		Requirements::javascript(MCE_ROOT . 'tiny_mce_src.js');
+    public static function include_js($configName)
+    {
+        Requirements::javascript(MCE_ROOT . 'tiny_mce_src.js');
 
-		$config = HtmlEditorConfig::get($configName);
-		$config->setOption('mode', 'none');
-		$config->setOption('editor_selector', "htmleditor$configName");
+        $config = HtmlEditorConfig::get($configName);
+        $config->setOption('mode', 'none');
+        $config->setOption('editor_selector', "htmleditor$configName");
 
-		Requirements::customScript("
+        Requirements::customScript("
 		Behaviour.register({
 		'textarea.htmleditor$configName' : {
 		initialize : function() {
@@ -92,15 +94,16 @@ class HTMLEditorFieldSmall extends HtmlEditorField {
 		}
 		})
 		", "htmlEditorConfig-$configName");
-	}
+    }
 
-	public function __construct($config, $name, $title = null, $rows = 30, $cols = 20, $value = '', $form = null) {
-		// Skip the HtmlEditorField's constructor
-		TextareaField::__construct($name, $title, $rows, $cols, $value, $form);
+    public function __construct($config, $name, $title = null, $rows = 30, $cols = 20, $value = '', $form = null)
+    {
+        // Skip the HtmlEditorField's constructor
+        TextareaField::__construct($name, $title, $rows, $cols, $value, $form);
 
-		$this->addExtraClass('typography');
-		$this->addExtraClass("htmleditor$config");
+        $this->addExtraClass('typography');
+        $this->addExtraClass("htmleditor$config");
 
-		self::include_js($config);
-	}
+        self::include_js($config);
+    }
 }
