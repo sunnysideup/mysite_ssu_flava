@@ -37,6 +37,7 @@ class Page_Controller extends ContentController {
 
 	function init(){
 		parent::init();
+		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
 	}
 
 	function Siblings(){
