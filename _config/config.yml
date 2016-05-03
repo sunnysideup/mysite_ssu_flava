@@ -16,7 +16,8 @@ MySQLDatabase:
 SiteConfig:
   extensions:
     - SiteConfigExtras
-
+  cms_logo: 'themes/main/images/cms_logo.png'
+  
 GDBackend:
   default_quality: 85
 
@@ -35,7 +36,6 @@ LeftAndMain:
   application_name: "Sunny Side Up Website"
   extra_requirements_css:
     - "mysite/css/cmsfixes.css"
-
 
 
 
