@@ -11,7 +11,7 @@ require_once("conf/ConfigureFromEnv.php");
 date_default_timezone_set('Pacific/Auckland');
 
 //set cache to 72 hours
-SS_Cache::set_cache_lifetime('any', 60*60*73);
+SS_Cache::set_cache_lifetime('any', 60*60*72);
 
 if(Director::isLive()) {
 	SS_Log::add_writer(new SS_LogEmailWriter('ssuerrors@gmail.com'), SS_Log::ERR);
