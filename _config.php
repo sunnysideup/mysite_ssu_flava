@@ -8,9 +8,7 @@ require_once("conf/ConfigureFromEnv.php");
 
 
 
-//===================---------------- START php MODULE ----------------===================
 date_default_timezone_set('Pacific/Auckland');
-//===================---------------- END php MODULE ----------------===================
 
 //set cache to 72 hours
 SS_Cache::set_cache_lifetime('any', 60*60*73);
@@ -21,3 +19,8 @@ if(Director::isLive()) {
 else {
 	//BasicAuth::protect_entire_site(); see config.yml
 }
+
+HtmlEditorConfig::get('cms')->setOption(
+    'valid_styles',
+    array('*' => 'width,height,color,font-size,font-weight,font-style,text-decoration')
+);
