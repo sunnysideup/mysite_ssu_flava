@@ -24,3 +24,16 @@ HtmlEditorConfig::get('cms')->setOption(
     'valid_styles',
     array('*' => 'width,height,color,font-size,font-weight,font-style,text-decoration')
 );
+HtmlEditorConfig::get('cms')->setOption(
+    'paste_as_text',
+    true
+);
+HtmlEditorConfig::get('cms')->setOption(
+    'paste_text_sticky',
+    true
+);
+HtmlEditorConfig::get('cms')->setOption(
+    'paste_text_sticky_default',
+    true
+);
+
