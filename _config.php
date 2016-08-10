@@ -22,7 +22,7 @@ else {
 
 HtmlEditorConfig::get('cms')->setOption(
     'valid_styles',
-    array('*' => 'width,height,color,font-size,font-weight,font-style,text-decoration')
+    array('*' => 'color,font-weight,font-style,text-decoration')
 );
 HtmlEditorConfig::get('cms')->setOption(
     'paste_as_text',
