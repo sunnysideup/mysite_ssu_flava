@@ -3,10 +3,12 @@
     "type": "silverstripe-module",
     "description": "basic mysite folder for Silverstripe",
     "keywords": [
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
         "mysite",
         "template",
         "basic",
-        "silverstripe",
         "install",
         "boilerplate"
     ],
