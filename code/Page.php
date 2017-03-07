@@ -62,9 +62,10 @@ class Page_Controller extends ContentController
             'ErrorPage',
             'HomePage',
             'TypographyTestPage',
-            'TemplateOverviewPage'
+            'TemplateOverviewPage',
+            'UserDefinedForm'
         );
 
         return in_array($this->ClassName, $standard);
-    }    
+    }
 }
