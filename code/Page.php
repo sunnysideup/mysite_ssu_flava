@@ -51,4 +51,20 @@ class Page_Controller extends ContentController
         return Page::get()
             ->filter(array("ShowInMenus" => 1, "ParentID" => $this->ParentID));
     }
+
+    function IsInHouseTemplate()
+    {
+        $standard = array(
+            'Page',
+            'WebPortfolioPage',
+            'PresentationPage',
+            'TermsAndConditionsPage',
+            'ErrorPage',
+            'HomePage',
+            'TypographyTestPage',
+            'TemplateOverviewPage'
+        );
+
+        return in_array($this->ClassName, $standard);
+    }    
 }
