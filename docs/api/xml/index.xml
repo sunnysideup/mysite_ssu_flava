@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/_modules/mysite/trunk">
-  <namespace name="">
-    <class name="Page" src="code/Page.php" xml="classes/Page.xml"/>
-    <class name="Page_Controller" src="code/Page.php" xml="classes/Page_Controller.xml"/>
-    <class name="HTMLEditorFieldSmall" src="code/forms/HTMLEditorFieldSmall.php" description="Sometimes you want two or more TinyMCE instances in the same page, and for each one to have it's own tinymce configuration. This class lets you do just that." xml="classes/HTMLEditorFieldSmall.xml"/>
-    <class name="SiteConfigExtras" src="code/config/SiteConfigExtras.php" description="author nicolaas [at] sunnysideup.co.nz" xml="classes/SiteConfigExtras.xml"/>
-  </namespace>
-</index>

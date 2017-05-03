@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="Page_Controller" namespace="" name="Page_Controller" abstract="false" final="false" start="31" end="38">
-  <file path="/var/www/_modules/mysite/trunk/docs/en/phpdox/../../../code" file="Page.php" realpath="/var/www/_modules/mysite/trunk/code/Page.php" size="703" time="2015-03-14T10:22:19+13:00" unixtime="1426281739" sha1="d06fed7b62eac3d86cb2049f38ce9f4eb4463f4a" relative="code/Page.php"/>
-  <extends full="ContentController" namespace="" name="ContentController"/>
-  <method name="init" start="33" end="35" abstract="false" final="false" static="false" visibility="public"/>
-</class>
