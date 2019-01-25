@@ -1,8 +1,8 @@
 ---
-Name: mysiteconfig
+Name: appconfig
 After: 'framework/*','cms/*'
 ---
-SiteTree:
+SilverStripe\CMS\Model\SiteTree:
   nested_urls: 1
   create_default_pages: 0
   meta_generator: "www.sunnysideup.co.nz based on www.silverstripe.org and LAMP"
@@ -13,7 +13,7 @@ SSViewer:
 MySQLDatabase:
   connection_charset: 'utf8'
 
-SiteConfig:
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtras
   cms_logo: 'themes/main/images/cms_logo.png'
@@ -32,10 +32,10 @@ i18n:
   date_format: "dd-MM-YYYY"
   locale: 'en_NZ'
 
-LeftAndMain:
+SilverStripe\Admin\LeftAndMain:
   application_name: "Sunny Side Up Website"
   extra_requirements_css:
-    - "mysite/css/cmsfixes.css"
+    - "app/css/cmsfixes.css"
 
 
 

@@ -1,0 +1,3 @@
+mappings:
+  SiteConfigExtras: Sunnysideup\MysiteSSUFlava\Config\SiteConfigExtras
+  HTMLEditorFieldSmall: Sunnysideup\MysiteSSUFlava\Forms\HTMLEditorFieldSmall

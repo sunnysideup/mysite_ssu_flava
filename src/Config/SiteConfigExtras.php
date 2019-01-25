@@ -1,5 +1,13 @@
 <?php
 
+namespace Sunnysideup\MysiteSSUFlava\Config;
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\ORM\DataExtension;
+
 /**
  *@author nicolaas [at] sunnysideup.co.nz
  *
@@ -13,7 +21,7 @@ class SiteConfigExtras extends DataExtension
     );
 
     private static $has_one = array(
-        "BackgroundImage" => "Image"
+        "BackgroundImage" => Image::class
     );
 
     public function updateCMSFields(FieldList $fields)

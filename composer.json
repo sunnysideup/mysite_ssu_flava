@@ -1,12 +1,12 @@
 {
-    "name": "sunnysideup/mysite_ssu_flava",
+    "name": "sunnysideup/app_ssu_flava",
     "type": "silverstripe-module",
-    "description": "basic mysite folder for Silverstripe",
+    "description": "basic app folder for Silverstripe",
     "keywords": [
         "Silverstripe-CMS",
         "CMS",
         "Silverstripe",
-        "mysite",
+        "app",
         "template",
         "basic",
         "install",
@@ -21,10 +21,23 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "~3.6",
-        "silverstripe/cms": "~3.6"
+        "silverstripe/recipe-cms": "^4.3"
     },
     "extra": {
-        "installer-name": "mysite"
+        "installer-name": "app",
+        "expose": [
+            "client/javascript",
+            "client/images",
+            "client/css"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Sunnysideup\\MysiteSSUFlava\\": "src/"
+        },
+        "files": [
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ]
     }
 }

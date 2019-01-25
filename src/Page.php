@@ -1,9 +1,13 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\SiteConfig\SiteConfig;
+
 class Page extends SiteTree
 {
     private static $has_one = array(
-        "BackgroundImage" => "Image"
+        "BackgroundImage" => Image::class
     );
 
     public function getCMSFields()
@@ -34,4 +38,3 @@ class Page extends SiteTree
         }
     }
 }
-

@@ -1,6 +1,6 @@
 <?php
 
-class MysiteSsuFlavaTest extends SapphireTest
+class AppSsuFlavaTest extends SapphireTest
 {
     protected $usesDatabase = false;
 
