@@ -36,8 +36,8 @@
             "Sunnysideup\\MysiteSSUFlava\\": "src/"
         },
         "files": [
-            "app/src/Page.php",
-            "app/src/PageController.php"
+            "src/Page.php",
+            "src/PageController.php"
         ]
     }
 }
