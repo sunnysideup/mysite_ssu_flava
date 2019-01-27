@@ -3,12 +3,8 @@
 use SilverStripe\View\Requirements;
 use SilverStripe\CMS\Controllers\ContentController;
 
-class Page_Controller extends ContentController
+class PageController extends ContentController
 {
-    public function init()
-    {
-        parent::init();
-    }
 
     public function Siblings()
     {

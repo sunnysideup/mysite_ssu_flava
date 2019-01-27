@@ -1,40 +1,43 @@
 <?php
 
-use SilverStripe\Assets\Image;
-use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\SiteConfig\SiteConfig;
+namespace {
+    use SilverStripe\Assets\Image;
+    use SilverStripe\CMS\Model\SiteTree;
+    use SilverStripe\SiteConfig\SiteConfig;
 
-class Page extends SiteTree
-{
-    private static $has_one = array(
-        "BackgroundImage" => Image::class
-    );
 
-    public function getCMSFields()
+    class Page extends SiteTree
     {
-        $fields = parent::getCMSFields();
-        return $fields;
-    }
+        private static $has_one = array(
+            "BackgroundImage" => Image::class
+        );
 
-    public function MyBackgroundImage()
-    {
-        if ($this->BackgroundImageID) {
-            if ($image = $this->BackgroundImage()) {
-                return $image;
-            }
+        public function getCMSFields()
+        {
+            $fields = parent::getCMSFields();
+            return $fields;
         }
-        if ($this->ParentID) {
-            if ($parent = SiteTree::get()->byID($this->ParentID)) {
-                return $parent->MyBackgroundImage();
+
+        public function MyBackgroundImage()
+        {
+            if ($this->BackgroundImageID) {
+                if ($image = $this->BackgroundImage()) {
+                    return $image;
+                }
             }
-        }
-        if ($this->URLSegment != 'home') {
-            if ($homePage = SiteTree::get()->filter(array('URLSegment' => 'home'))->first()) {
-                return $homePage->MyBackgroundImage();
+            if ($this->ParentID) {
+                if ($parent = SiteTree::get()->byID($this->ParentID)) {
+                    return $parent->MyBackgroundImage();
+                }
             }
-        }
-        if ($siteConfig = SiteConfig::current_site_config()) {
-            return $siteConfig->BackgroundImage();
+            if ($this->URLSegment != 'home') {
+                if ($homePage = SiteTree::get()->filter(array('URLSegment' => 'home'))->first()) {
+                    return $homePage->MyBackgroundImage();
+                }
+            }
+            if ($siteConfig = SiteConfig::current_site_config()) {
+                return $siteConfig->BackgroundImage();
+            }
         }
     }
 }
